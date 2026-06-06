@@ -23,7 +23,7 @@ if (isset($_POST["usuario"])){
         header("Location: presidente.php");
     }
 
-    $query = "SELECT nocta, nombre, appat, apmat, password FROM usuarios WHERE nocta = '$usuario' AND password = '$password'";
+    $query = "SELECT nocta, nombre, appat, apmat, password FROM usuarios WHERE nocta = '$usuario' AND password = '$password '";
     $result = mysqli_query( $con, $query);
     $registro = mysqli_fetch_assoc($result);
     //echo $query;
